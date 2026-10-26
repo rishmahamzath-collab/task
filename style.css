@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    padding: 40px 15px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #5b4bc4;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.form-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+input:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 5px rgba(118, 75, 162, 0.2);
+}
+
+#submitBtn {
+    grid-column: 1 / -1;
+    padding: 13px;
+    background: #6c5ce7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#submitBtn:hover {
+    background: #5541c8;
+}
+
+#search {
+    margin-top: 10px;
+}
+
+h2 {
+    color: #333;
+    margin: 15px 0;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th {
+    background: #6c5ce7;
+    color: white;
+}
+
+th, td {
+    padding: 13px 10px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+    background: #f7f5ff;
+}
+
+button {
+    transition: 0.2s;
+}
+
+.action-btn {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    margin: 2px;
+}
+
+.edit-btn {
+    background: #0984e3;
+}
+
+.delete-btn {
+    background: #e74c3c;
+}
+
+.edit-btn:hover {
+    background: #0769b5;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+#emptyMessage {
+    text-align: center;
+    color: #888;
+    padding: 20px 0;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .container {
+        padding: 20px 15px;
+    }
+
+    .form-box {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+}

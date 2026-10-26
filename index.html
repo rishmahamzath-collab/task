@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CRUD Application</h1>
+        <p class="subtitle">Manage your records easily</p>
+        <div class="form-box">
+            <input type="hidden" id="editIndex">
+            <input type="text" id="name" placeholder="Enter your name">
+            <input type="email" id="email" placeholder="Enter your email">
+            <input type="text" id="phone" placeholder="Enter your phone number">
+            <button id="submitBtn" onclick="addRecord()">Add Record</button>
+        </div>
+        <input
+            type="text"
+            id="search"
+            placeholder="Search records..."
+            oninput="displayRecords()"
+        >
+        <h2>Records List</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="recordList"></tbody>
+            </table>
+        </div>
+        <p id="emptyMessage">No records found. Add your first record!</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
